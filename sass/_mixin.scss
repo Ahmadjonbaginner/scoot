@@ -1,0 +1,19 @@
+@mixin hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: $hero-color;
+    border: 2px solid $btn-color;
+    color: $btn-color;
+}
+
+@mixin for-mobile-only {
+    @media (max-width: 640px) {
+        @content;
+    }
+}
+
+@mixin for-table-only {
+    @media (max-width: 1010px) {
+        @content;
+    }
+}

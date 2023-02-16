@@ -1,0 +1,118 @@
+.clients-box {
+    padding-top: 200px;
+}
+
+.clients {
+    position: relative;
+    margin-bottom: 160px;
+    &__arrow1 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        @include for-table-only {
+            top: 307px;
+        }
+        @include for-mobile-only {
+            display: none;
+        }
+    }
+    &__arrow2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include for-mobile-only {
+            display: none;
+        }
+    }
+    &__arrow3 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include for-mobile-only {
+            display: none;
+        }
+    }
+    &__arrow1-mobile {
+        display: none;
+        @include for-mobile-only {
+            display: block;
+            position: absolute;
+            top: 240px;
+            right: 0;
+        }
+    }
+    &__arrow2-mobile {
+        display: none;
+        @include for-mobile-only {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__arrow3-mobile {
+        display: none;
+        @include for-mobile-only {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+.client2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include for-table-only {
+        flex-direction: column;
+        row-gap: 56px;
+    }
+}
+
+.client {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include for-table-only {
+        flex-direction: column-reverse;
+        row-gap: 56px;
+    }
+    &__texts {
+        max-width: 445px;
+        @include for-table-only {
+            text-align: center;
+            max-width: 573px;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -2.14286px;
+        color: $title-color;
+        @include for-mobile-only {
+            font-size: 32px;
+            line-height: 32px;
+        }
+    }
+    &__text {
+        font-family: $text-font;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        color: $text-color;
+        margin: 24px 0 40px 0;
+        @include for-table-only {
+            margin: 40px 0;
+        }
+    }
+}
+
+.object--img {
+    width: 445px;
+    height: 445px;
+    object-fit: cover;
+    object-position: left;
+}

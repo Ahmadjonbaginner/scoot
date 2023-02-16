@@ -1,0 +1,41 @@
+.sign-up {
+    padding: 102px 0;
+    background-image: url('../../images/sign-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include for-table-only {
+        padding: 62px 0;
+        background-image: url('../../images/sign-table-bg.jpg');
+        @include for-mobile-only {
+            background-image: url('../../images/sign-mobile-bg.jpg');
+            padding: 88px 0;
+        }
+    }
+}
+
+.sign {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include for-table-only {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    &__title {
+        max-width: 415px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -2.14286px;
+        color: $hero-color;
+        @include for-table-only {
+            text-align: center;
+        }
+        @include for-mobile-only {
+            max-width: 311px;
+            font-size: 32px;
+            line-height: 32px;
+        }
+    }
+}
