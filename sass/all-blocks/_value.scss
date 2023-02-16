@@ -1,0 +1,55 @@
+.values__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -2.14286px;
+    color: $title-color;
+    @include for-mobile-only {
+        font-size: 32px;
+        line-height: 32px;
+    }
+}
+
+.value {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    @include for-table-only {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 55px;
+    }
+    &__card {
+        text-align: center;
+        max-width: 350px;
+        @include for-table-only {
+            max-width: 457px;
+        }
+        &__images {
+            position: relative;
+            &__value1-icon {
+                position: absolute;
+                bottom: -30px;
+                left: 130px;
+                @include for-table-only {
+                    left: 180px;
+                }
+            }
+        }
+        &__title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: -1.07143px;
+            color: $title-color;
+            margin: 87px 0 27px 0;
+        }
+        &__text {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 25px;
+            color: $text-color;
+        }
+    }
+}

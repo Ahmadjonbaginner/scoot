@@ -1,0 +1,116 @@
+.about-clients-box {
+    padding-top: 120px;
+}
+
+.about-clients {
+    position: relative;
+    margin-bottom: 170px;
+    &__arrow1 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        @include for-table-only {
+            top: 265px;
+        }
+        @include for-mobile-only {
+            display: none;
+        }
+    }
+    &__arrow1-mobile {
+        display: none;
+        @include for-mobile-only {
+            display: block;
+            position: absolute;
+            top: 265px;
+            right: 0;
+        }
+    }
+    &__arrow2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include for-mobile-only {
+            display: none;
+        }
+    }
+    &__arrow2-mobile {
+        display: none;
+        @include for-mobile-only {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__oval1 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        @include for-mobile-only {
+            display: none;
+        }
+    }
+    &__oval2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        @include for-mobile-only {
+            display: none;
+        }
+    }
+}
+
+.about-client {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include for-table-only {
+        flex-direction: column-reverse;
+        row-gap: 56px;
+    }
+    &__texts {
+        max-width: 445px;
+        @include for-table-only {
+            max-width: 573px;
+            text-align: center;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -2.14286px;
+        color: $title-color;
+        @include for-mobile-only {
+            font-size: 32px;
+            line-height: 32px;
+        }
+    }
+    &__text {
+        font-family: $text-font;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        color: $text-color;
+        margin-top: 24px;
+    }
+}
+
+.about-client2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include for-table-only {
+        flex-direction: column;
+        row-gap: 56px;
+    }
+}
+
+.about-object--img {
+    width: 445px;
+    height: 445px;
+    object-fit: cover;
+    object-position: left;
+}
